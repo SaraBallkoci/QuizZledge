@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font: Poppins
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+#quizzledge {
+    font-weight: bold;
+}

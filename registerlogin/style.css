@@ -1,0 +1,122 @@
+body{
+  background-color: rgba(238, 238, 241, 0.9);
+
+}
+.container{
+background-color: rgba(238, 238, 241, 0.9);
+margin: 0% auto;
+padding: 2%;
+width: 50%;
+float:right;
+
+}
+.container1{
+float: left;
+background-color: rgba(238, 238, 241, 0.9);
+margin: 0% auto;
+padding: 2%;
+width: 50%;
+}
+.container1 > img{
+object-fit: cover;
+height: 100%;
+width: 100%;
+}
+
+
+.form-group{
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-bottom: 1.5em;
+ 
+}
+.form-control{
+  border-radius: 1em;
+  font-size: 1.3em;
+
+}
+.btn{
+  color: beige;
+  border-radius: 1em;
+  font-size: 1.3em;
+  background-color: rgba(85, 90, 145, 0.9);
+  width: 100%;
+  margin-top: 1em;
+
+}
+.btn:hover{
+  background-color: rgba(106, 112, 178, 0.9);
+}
+
+.title{
+  font-size: 1.7em;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+
+}
+a {
+  text-decoration: none;
+  color: rgba(85, 90, 145, 0.9);
+}
+a:link:hover {
+  text-decoration: none;
+
+}
+
+::placeholder{
+  font-size: 15px;
+}
+
+/*AVATAR*/
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+/* CHECKED STYLES */
+.form-check .img-fluid{
+  width: 50%;
+ 
+}
+#avatar{
+  width: 8%;
+  float: right;
+  
+}
+
+.form-check{
+  display: inline-flex;
+  padding-left: 9.25em;
+
+
+}
+.form-check label{
+  margin-left: -2em;
+}
+
+.input-group-addon{
+background-color: white;
+border-radius: 1em;
+padding: 9px;
+}
+
+.login{
+margin-top: 12%;
+ }
+.login1{
+margin-bottom: 21%;
+}
+
+.success{
+color: #5db836;
+}
+.error{
+color: #eb4d4b;
+}

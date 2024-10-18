@@ -1,0 +1,38 @@
+#new-quiz{
+    padding-top: 3.4rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ html {
+    font-size: 16px;
+}
+
+body{
+  background-color:#e5e6ed;
+  overflow-x: hidden;
+}
+
+ a.body {
+    font-family: "Cairo", sans-serif;
+    background-color:#0a0f25;
+    color: #ffffff;
+    padding-top: 50px;
+}
+#nav-bar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    
+}
+#nav-bar a{
+    color:#0e0d0d;
+    padding-top: 20px;
+    padding-left:30px;
+    font-weight: bold;
+}

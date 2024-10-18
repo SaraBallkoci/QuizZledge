@@ -1,0 +1,78 @@
+Array
+(
+    [responses] => Array
+        (
+            [0] => Array
+                (
+                    [question] => The land of Gotland is located in which European country?
+                    [givenAnswer] => Germany
+                    [isCorrect] => 
+                )
+
+            [1] => Array
+                (
+                    [question] => The land mass of modern day Turkey is called what?
+                    [givenAnswer] => Ottoma
+                    [isCorrect] => 
+                )
+
+            [2] => Array
+                (
+                    [question] => What is the capital of Seychelles?
+                    [givenAnswer] => Tripoli
+                    [isCorrect] => 
+                )
+
+            [3] => Array
+                (
+                    [question] => Where would you find the "Spanish Steps"?
+                    [givenAnswer] => Berlin, Germany
+                    [isCorrect] => 
+                )
+
+            [4] => Array
+                (
+                    [question] => What's the first National Park designated in the United States?
+                    [givenAnswer] => Yellowstone
+                    [isCorrect] => 1
+                )
+
+            [5] => Array
+                (
+                    [question] => What name was historically used for the Turkish city currently known as Istanbul?
+                    [givenAnswer] => Constantinople
+                    [isCorrect] => 1
+                )
+
+            [6] => Array
+                (
+                    [question] => If soccer is called football in England, what is American football called in England?
+                    [givenAnswer] => American football
+                    [isCorrect] => 1
+                )
+
+            [7] => Array
+                (
+                    [question] => What North American tourist attraction is served by the "Maid of the Mist" tour company?
+                    [givenAnswer] => Whistler, British Columbia
+                    [isCorrect] => 
+                )
+
+            [8] => Array
+                (
+                    [question] => Which country is the home of the largest Japanese population outside of Japan?
+                    [givenAnswer] => China
+                    [isCorrect] => 
+                )
+
+            [9] => Array
+                (
+                    [question] => Which nation claims ownership of Antarctica?
+                    [givenAnswer] => United States of America
+                    [isCorrect] => 
+                )
+
+        )
+
+    [score] => 3
+)

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create New Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        .question-card {
+            display: none;
+        }
+    </style>
+</head>
+<body id="new-quizz">
+    <div class="container mt-4">
+        <h1>Create New Quiz</h1>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Quiz Details</h5>
+                <div class="form-group">
+                    <label for ="quizName">Quiz Name:</label>
+                    <input type="text" class="form-control" id="quizName">
+                </div>
+                <div class="form-group">
+                    <label for= "quizDescription">Quiz Description:</label>
+                    <textarea class="form-control" id="quizDescription" rows="3"></textarea>
+                </div>
+
+                <!-- Boutons "Add New Question" dans la section "Quiz Details" -->
+                <div id="addQuestionButtons" class="mt-3">
+                    <button class="btn btn-danger ml-2" id="showQuestion1">1</button>
+                    <button class="btn btn-success" id="addQuestion">Add New Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Cards -->
+        <div class="question-list mt-4">
+           
+            <!-- Question cards will be added here -->
+        </div>
+
+        <div class="d-flex justify-content-between mt-3">
+            <button class="btn btn-danger" id="cancelCreation">Cancel</button>
+            <button class="btn btn-primary" id="finishCreation" data-toggle="modal" data-target="#quizPreview">Finish Quiz Creation</button>
+        </div>
+    </div>
+
+    <!-- Quiz Preview Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="quizPreview">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Quiz Preview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <!-- Les en-têtes du tableau -->
+                        </thead>
+                        <tbody>
+                            <!-- Les éléments du tableau -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="validateQuizzButton">Validate quizz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        var questionCounter = 1;
+
+        document.getElementById("addQuestion").addEventListener("click", function() {
+            questionCounter++;
+            var newButton = document.createElement("button");
+            newButton.textContent = questionCounter;
+            newButton.className = "btn btn-danger ml-2";
+            newButton.addEventListener("click", function() {
+                // Ajoutez ici la logique pour afficher la carte de question associée
+                var questionId = this.textContent;
+                showQuestionCard(questionId);
+            });
+            document.getElementById("addQuestionButtons").appendChild(newButton);
+        });
+
+        document.getElementById("showQuestion1").addEventListener("click", function() {
+            showQuestionCard("1");
+        });
+
+        // Ajout de cet appel pour afficher initialement la première carte
+        showQuestionCard("1");
+
+        function showQuestionCard(questionId) {
+            var questionCards = document.querySelectorAll(".question-card");
+            questionCards.forEach(function(card) {
+                card.style.display = "none"; // Masquer toutes les cartes de questions
+            });
+            var questionCard = createQuestionCard(questionId);
+            questionCard.style.display = "block"; // Afficher la carte de la question sélectionnée
+        }
+
+        function createQuestionCard(questionId) {
+            var questionCard = document.createElement("div");
+            questionCard.className = "card mt-4 question-card";
+            questionCard.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">Question ${questionId}</h5>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="questionText${questionId}">
+                            <small style="display: none;" id="questionTextError${questionId}" class="form-text text-danger">This field is required.</small>
+                        </div>
+                        <h6 class="card-subtitle mt-4">Answer Options:</h6>
+                    </form>
+                </div>
+            `;
+            var questionList = document.querySelector(".question-list");
+            questionList.appendChild(questionCard);
+            return questionCard;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "poppins";
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+.card-body{
+    background-color: #0d637e;
+}
+
+.card-body table{
+    color: white;
+    border: none;
+    overflow-x: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar{
+    max-width: 100%;
+    height: auto;
+    width:47%;
+    transform: scale(0.9);
+}
+
+.image_field{
+    width: 10%;
+}
+
+.number_field{
+    width: 4%;
+    padding-left:1%;
+}
+
+#user_row{
+    background-color: #1399c2d2;
+}
+
+#user_avatar{
+    height: auto;
+    max-width: 100%;
+    width: 47%;
+    /*transform: scale(0.95);*/
+}
+
+.table_header{
+    padding-bottom: 2%;
+}
+
+@media only screen and (max-width: 962px) {
+    .avatar{
+        height:38px;
+        width:38px;
+    }
+
+    #user_avatar{
+        height: 38px;
+        width: 38px;
+    }
+}
+
+a.body {
+    font-family: "Cairo", sans-serif;
+    background-color:#0a0f25;
+    color: #ffffff;
+    padding-top: 50px;
+}
+#nav-bar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    
+}
+#nav-bar a{
+    color:#0e0d0d;
+    padding-top: 20px;
+    padding-left:30px;
+    font-weight: bold;
+}
+
+#position{
+    margin-top: 10rem;
+}

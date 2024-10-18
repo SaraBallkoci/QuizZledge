@@ -1,0 +1,45 @@
+
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  /* CHECKED STYLES */
+  .img-fluid{
+    width: 12%;
+  }
+  #avatar{
+    width: 20%;
+    float: right;
+    
+  }
+
+  .username{
+    float: right;
+  }
+  .form-check{
+    display:inline;
+    padding-left: 9.25rem;
+    padding-bottom: 0.5em;
+  }
+ 
+
+.input-group-addon{
+  background-color: white;
+  border-radius: 1em;
+  padding: 9px;
+}
+
+.login{
+  margin-top: 12%;
+   }
+.login1{
+  margin-bottom: 21%;
+}
+
+.success{
+  color: #5db836;
+}
+.error{
+  color: #eb4d4b;
+}
